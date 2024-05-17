@@ -13,15 +13,30 @@ public class SecondGreatestElement {
 		int array[]=new int[size];
 		System.out.println("Enter The values of array :");
 		
-		int previous=0,current=0;
+		int maximum=array[0];
 		
 		for(int i=0;i<size;i++) {
 			array[i]=scanner.nextInt();
 			
-			if(array[i]>=current) {
-				previous=current;
-				current=array[i];
+			if(array[i]>=maximum) {
+				
+				maximum=array[i];
 			}
+		}
+		int second_max=Integer.MIN_VALUE;
+		int count=0;
+		for(int i=0;i<size;i++) {
+			
+			if(count==0 && array[i]==maximum) {
+				count++;
+				continue;
+			}
+			
+			if(second_max<array[i]) {
+				second_max=array[i];
+			}
+			
+			
 		}
 		System.out.println("Second largest number is "+previous);
 		scanner.close();
