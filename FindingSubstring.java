@@ -24,17 +24,17 @@ public class FindingSubstring {
 		
 	 
 			   
-			  int ch1length=string1.length(); 
-			  int ch2length=string2.length(); 
-			  for(int i=0;i<ch1length;i++) { 
+			  int length1=string1.length(); 
+			  int length2=string2.length(); 
+			  for(int i=0;i<length1;i++) { 
 			   int j; 
-			   for(j=0;j<ch2length;j++) { 
+			   for(j=0;j<length2;j++) { 
 			    if(string1.charAt(i+j)!=string2.charAt(j)) { 
 			     break; 
 			      
 			    } 
 			   } 
-			   if(j==ch2length) { 
+			   if(j==length2) { 
 			    return true; 
 			   } 
 			    
