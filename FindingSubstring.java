@@ -22,30 +22,25 @@ public class FindingSubstring {
 	
 	private static boolean isSubstring(String string1, String string2) {
 		
-		int length1=string1.length();
-		int length2=string2.length();
+	 
+			   
+			  int ch1length=string1.length(); 
+			  int ch2length=string2.length(); 
+			  for(int i=0;i<ch1length;i++) { 
+			   int j; 
+			   for(j=0;j<ch2length;j++) { 
+			    if(string1.charAt(i+j)!=string2.charAt(j)) { 
+			     break; 
+			      
+			    } 
+			   } 
+			   if(j==ch2length) { 
+			    return true; 
+			   } 
+			    
+			  } 
+			  return false; 
 		
-		if(length2 > length1) {
-			return false;
-		}
-		int i=0,j=0;
-		int same_character_count=0;
-		
-		while(j<length1) {
-			
-			if(string1.charAt(j)==string2.charAt(i)) {
-				i++;
-				same_character_count++;
-			}
-			else {
-				same_character_count=0;
-				i=0;
-			}
-			j++;
-			if(same_character_count==length2) return true;
-		}
-		
-		return false;
-	}
+	 }
 
 }
