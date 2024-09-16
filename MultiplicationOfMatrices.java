@@ -13,13 +13,13 @@ public class MultiplicationOfMatrices {
 		System.out.println("Enter the number of columns of 1st matrix :");
 		int column1= scanner.nextInt();
 		
-		int array1[][]=new int[row1][column1];
+		int matrix1[][]=new int[row1][column1];
 		
 		System.out.println("Enter the values 1st Matrix row wise :");
 		
 		for(int i=0;i<row1;i++) {
 			for(int j=0;j<column1;j++) {
-				array1[i][j]=scanner.nextInt();
+				matrix1[i][j]=scanner.nextInt();
 			}
 		}
 		
@@ -29,11 +29,11 @@ public class MultiplicationOfMatrices {
 		System.out.println("Enter the number of columns of 2nd matrix :");
 		int column2= scanner.nextInt();
 		
-		int array2[][]=new int[row2][column2];
+		int matrix2[][]=new int[row2][column2];
 		System.out.println("Enter the values 2nd Matrix row wise :");
 		for(int i=0;i<row2;i++) {
 			for(int j=0;j<column2;j++) {
-				array2[i][j]=scanner.nextInt();
+				matrix2[i][j]=scanner.nextInt();
 			}
 		}
 		
@@ -51,7 +51,7 @@ public class MultiplicationOfMatrices {
 					
 					for(int k=0;k<row2;k++) {
 						productMatrix[i][j] 
-		                        += array1[i][k] * array2[k][j]; 
+		                        += matrix1[i][k] * matrix2[k][j]; 
 					}
 					System.out.print(productMatrix[i][j]+" ");
 				}
