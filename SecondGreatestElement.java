@@ -23,7 +23,7 @@ public class SecondGreatestElement {
 				maximum=array[i];
 			}
 		}
-		int second_max=Integer.MIN_VALUE;
+		int second_max=array[0];
 		int count=0;
 		for(int i=0;i<size;i++) {
 			
